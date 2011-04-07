@@ -1,6 +1,6 @@
 # coding: utf-8
 
-# Python API for The Fucking Weather, version 1.0
+# Python API for The Fucking Weather, version 1.0.1
 # Copyright (C) 2009  Ian Weller <ian@ianweller.org>
 # http://ianweller.org/thefuckingweather
 #
