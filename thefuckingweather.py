@@ -17,7 +17,8 @@ import re
 import urllib
 import urllib2
 
-RE_WEATHER = """<div><span class="small">(.*)</span></div>
+RE_WEATHER = """<div style="float: left;"><span class="small">(.*)</span></div>
+<iframe id="fbook" .*>.*</iframe>
 <div id="content"><div class="large" >(\d*)&deg;\?!<br />
 <br />(.*)</div><div  id="remark"><br />
 <span>(.*)</span></div>"""
