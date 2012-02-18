@@ -19,7 +19,7 @@ import urllib2
 
 RE_WEATHER = """<div style="float: left;"><span class="small">(.*)</span></div>
 <iframe id="fbook" .*>.*</iframe>
-<div id="content"><div class="large" >(\d*)&deg;\?!<br />
+<div id="content"><div class="large" >(-?\d*)&deg;\?!<br />
 <br />(.*)</div><div  id="remark"><br />
 <span>(.*)</span></div>"""
 
@@ -33,12 +33,12 @@ RE_FORECAST = """<div class="boxhead">
 <td class="center"><strong>(.{3})</strong></td>
 </tr>
 <tr>
-<td>HIGH:</td><td class="center hot">(\d*)</td>\
-<td class="center hot">(\d*)</td>
+<td>HIGH:</td><td class="center hot">(-?\d*)</td>\
+<td class="center hot">(-?\d*)</td>
 </tr>
 <tr>
-<td>LOW:</td><td class="center cold">(\d*)</td>\
-<td class="center cold">(\d*)</td>
+<td>LOW:</td><td class="center cold">(-?\d*)</td>\
+<td class="center cold">(-?\d*)</td>
 </tr>
 <tr>
 <td>FORECAST:</td><td class="center">(.*)</td><td class="center">(.*)</td></tr>
