@@ -2,11 +2,11 @@ from distutils.core import setup
 import thefuckingweather
 
 setup(name="thefuckingweather",
-      version="1.0.1",
+      version="1.0.2",
       description="Python API for The Fucking Weather",
       author="Ian Weller",
       author_email="ian@ianweller.org",
-      url="http://repo.or.cz/w/python-thefuckingweather.git",
+      url="https://github.com/ianweller/python-thefuckingweather",
       py_modules=["thefuckingweather"],
       license="""\
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE

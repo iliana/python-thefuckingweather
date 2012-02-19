@@ -1,6 +1,6 @@
 # coding: utf-8
 
-# Python API for The Fucking Weather, version 1.0.1
+# Python API for The Fucking Weather, version 1.0.2
 # Copyright (C) 2012  Red Hat, Inc. and others
 # https://github.com/ianweller/python-thefuckingweather
 #
