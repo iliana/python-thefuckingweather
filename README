@@ -25,10 +25,8 @@ and you'll get lots of return data. The data format is documented under
 get_weather(). You can also run it from a shell: this output is pretty
 to the average user but can also be parsed by the likes of sed.
 
-If you're interested, the git repository is located at
-  git://repo.or.cz/python-thefuckingweather.git
-The gitweb interface is at
-  http://repo.or.cz/w/python-thefuckingweather.git
+The Git repository is located on GitHub:
+  https://github.com/ianweller/python-thefuckingweather
 
 This program comes without any warranty (as stated in the copyright
 disclaimer), so please don't treat it as an actual weather reporting
