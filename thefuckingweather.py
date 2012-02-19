@@ -1,14 +1,17 @@
 # coding: utf-8
 
 # Python API for The Fucking Weather, version 1.0.1
-# Copyright (C) 2009  Ian Weller <ian@ianweller.org>
-# http://ianweller.org/thefuckingweather
+# Copyright (C) 2012  Red Hat, Inc. and others
+# https://github.com/ianweller/python-thefuckingweather
 #
 # This program is free software. It comes without any warranty, to
 # the extent permitted by applicable law. You can redistribute it
 # and/or modify it under the terms of the Do What The Fuck You Want
 # To Public License, Version 2, as published by Sam Hocevar. See
 # http://sam.zoy.org/wtfpl/COPYING for more details.
+#
+# Credits:
+# - Colin Rice for fixing the regexps to allow for negative temperatures
 
 """Scrapes data from www.thefuckingweather.com for a given location."""
 
@@ -83,10 +86,9 @@ def get_weather(location, celsius=False):
 
     "current" is a dictionary with three elements: "temperature" (an integer),
     "weather" (a list of descriptive elements about the weather, e.g., "ITS
-    FUCKING HOT", which may be coupled with something such as "AND THUNDERING";
-    this element is named as such because it always begins with "ITS FUCKING")
+    FUCKING HOT", which may be coupled with something such as "AND THUNDERING")
     and "remark" (a string printed by the server which is meant to be witty but
-    is often not. each to their own, I guess).
+    is sometimes not. each to their own, I guess).
 
     "forecast" is a dictionary with two elements, 0 and 1 (both integers). Each
     of these is a dictionary which contains the keys "day" (a three-letter
@@ -97,8 +99,7 @@ def get_weather(location, celsius=False):
     The default is for temperatures to be in Fahrenheit. If you're so inclined,
     you can pass True as a second variable and get temperatures in Celsius.
 
-    If you need a degree symbol, you can use thefuckingweather.DEGREE_SYMBOL,
-    for your convenience.
+    If you need a degree symbol, you can use thefuckingweather.DEGREE_SYMBOL.
     """
     # Retrieve yummy HTML
     query = {"zipcode": location}
@@ -144,7 +145,7 @@ def main():
     """
     usage = "usage: %prog [-c] location"
     parser = OptionParser(usage=usage)
-    parser.add_option("-c", "--celsius", dest="celsius", help="return temp"+\
+    parser.add_option("-c", "--celsius", dest="celsius", help="return temp" + \
                       "eratures in Celsius (Fahrenheit without this switch",
                       action="store_true", default=False)
     (options, args) = parser.parse_args()
