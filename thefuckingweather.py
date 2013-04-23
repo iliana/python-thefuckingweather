@@ -1,4 +1,4 @@
-# Python module for thefuckingweather.com, version 1.0.2
+# Python module for thefuckingweather.com, version 2.0
 # Copyright (C) 2013  Red Hat, Inc., and others.
 # https://github.com/ianweller/python-thefuckingweather
 #

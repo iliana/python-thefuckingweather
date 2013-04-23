@@ -2,8 +2,8 @@ from distutils.core import setup
 import thefuckingweather
 
 setup(name="thefuckingweather",
-      version="1.0.2",
-      description="Python API for The Fucking Weather",
+      version="2.0",
+      description="Python module for thefuckingweather.com",
       author="Ian Weller",
       author_email="ian@ianweller.org",
       url="https://github.com/ianweller/python-thefuckingweather",
