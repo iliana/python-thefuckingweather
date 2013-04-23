@@ -158,9 +158,9 @@ def main():
     """
     usage = "usage: %prog [-c] location"
     parser = OptionParser(usage=usage)
-    parser.add_option("-c", "--celsius", dest="celsius", help="return temp" + \
-                      "eratures in Celsius (Fahrenheit without this switch",
-                      action="store_true", default=False)
+    parser.add_option("-c", "--celsius", dest="celsius", action="store_true",
+                      help=("return temperatures in Celsius (Fahrenheit "
+                            "without this switch)"), default=False)
     (options, args) = parser.parse_args()
     if len(args) == 1:
         weather = get_weather(args[0], options.celsius)
