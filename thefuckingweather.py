@@ -1,5 +1,5 @@
-# Python API for The Fucking Weather, version 1.0.2
-# Copyright (C) 2012  Red Hat, Inc. and others
+# Python module for thefuckingweather.com, version 1.0.2
+# Copyright (C) 2013  Red Hat, Inc., and others.
 # https://github.com/ianweller/python-thefuckingweather
 #
 # This program is free software. It comes without any warranty, to
@@ -9,8 +9,8 @@
 # http://sam.zoy.org/wtfpl/COPYING for more details.
 #
 # Credits:
-# - Colin Rice for fixing the (no-longer used) regexps to allow for negative
-#   temperatures
+# - Colin Rice for fixing the (no-longer used) regexps to allow for
+#   negative temperatures
 
 """Scrapes data from www.thefuckingweather.com for a given location."""
 
