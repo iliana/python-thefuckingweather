@@ -47,7 +47,7 @@ Please report what you did to get this error and this full Python traceback
 to ian@ianweller.org. Thanks!""".format(lookup))
 
 
-def get_weather(location, celsius=False):
+def get_weather(location=False, celsius=False):
     """
     Retrieves weather and forecast data for a given location.
 
@@ -74,7 +74,10 @@ def get_weather(location, celsius=False):
     If you need a degree symbol, you can use thefuckingweather.DEGREE_SYMBOL.
     """
     # Generate query string
-    query = {"where": location}
+    if location == False:
+        query = {"random": "True"}
+    else:
+        query = {"where": location}
     if celsius:
         query["unit"] = "c"
     query_string = urllib.urlencode(query)
